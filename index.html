@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="weather-card">
+    <h1>Weather Forecast</h1>
+    <p class="subtitle">Check the current weather in any city</p>
+
+    <form id="weather-form">
+      <input id="city-input" type="text" placeholder="Enter city name" aria-label="City name" required>
+      <button type="submit" id="search-button">Search</button>
+    </form>
+
+    <p id="message" role="status">Search for a city to see its weather.</p>
+
+    <section id="weather-result" class="weather-result hidden" aria-live="polite">
+      <h2 id="city-name"></h2>
+      <div class="temperature-row">
+        <span id="weather-icon">🌤️</span>
+        <strong id="temperature">--°C</strong>
+      </div>
+      <p id="description"></p>
+      <div class="details">
+        <p>Feels like: <span id="feels-like">--</span></p>
+        <p>Humidity: <span id="humidity">--</span></p>
+        <p>Wind: <span id="wind">--</span></p>
+      </div>
+      <div class="unit-buttons">
+        <button type="button" id="celsius-button" class="active">°C</button>
+        <button type="button" id="fahrenheit-button">°F</button>
+      </div>
+    </section>
+    <p class="note">Weather data provided by Open-Meteo.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
