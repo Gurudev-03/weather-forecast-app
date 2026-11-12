@@ -83,7 +83,7 @@ function getWeatherDescription(code) {
 function convertTemperature(value, unit) {
   // BUG: This formula is incorrect. Fix it in your bug-fix branch.
   if (unit === "F") {
-    return (value * 5 / 9) + 32;
+    return (value * 9 / 5) + 32;
   }
   return value;
 }
